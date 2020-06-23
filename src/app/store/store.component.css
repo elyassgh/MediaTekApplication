@@ -1,0 +1,18 @@
+.discBtn {
+  background-color: #E04444;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500
+}
+.buy {
+  border-radius: 20px;
+  background-color: #fefefe;
+  color: #E04444
+}
+
+.cart {
+  background-color: #E04444;
+  border-radius: 20px;
+  position: relative;
+  right: 33px
+}

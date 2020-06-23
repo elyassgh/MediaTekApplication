@@ -3,11 +3,129 @@
 <head>
   <meta charset="utf-8">
   <title>MediaTek</title>
-  <base href="/">
+  <base href="/MediaTek">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800">
+  <link rel="stylesheet" href="assets/owl.carousel/assets/owl.carousel.css">
+  <link rel="stylesheet" href="assets/owl.carousel/assets/owl.theme.default.css">
+  <link rel="stylesheet" href="assets/style.red.css" id="theme-stylesheet">
+  <script src="assets/script.js"></script>
+  <script src="assets/app.js" async ></script>
 </head>
 <body>
-  <app-root></app-root>
+<!-- navbar-->
+<header class="header">
+  <nav class="navbar navbar-expand-lg fixed-top"><a href="index.html" class="navbar-brand">MediaTek</a>
+    <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span></span><span></span><span></span></button>
+    <div id="navbarSupportedContent" class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto align-items-start align-items-lg-center">
+        <li class="nav-item"><a href="/home" class="nav-link link-scroll">Acceuil</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link link-scroll">À propos</a></li>
+      </ul>
+      <div class="navbar-text">
+        <!-- Button trigger modal--><a id="identifier" href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary navbar-btn btn-shadow btn-gradient">S'inscrire</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<base href="/MediaTek">
+<app-root></app-root>
+<div id="scrollTop">
+  <div class="d-flex align-items-center justify-content-end"><i class="fa fa-long-arrow-up"></i> Monter </div>
+</div>
+<footer class="main-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-12"><a href="#" id="about" class="brand">MediaTek</a>
+        <h6>By :</h6>
+        <ul class="contact-info list-unstyled">
+          <li>Elghazi Ilyass</li>
+          <br>
+          <h6>E-mails :</h6>
+          <li>elghazi.elyass@gmail.com</li>
+          <li>elyass-elghazi@hotmail.com</li>
+        </ul>
+        <ul class="social-icons list-inline">
+          <li class="list-inline-item"> <h6>Visit GitHub Repository</h6> </li>
+          <li class="list-inline-item"><a href="https://github.com/elyassgh" target="_blank" title="Github"><i class="fa fa-github"></i></a></li>
+        </ul>
+        <h6>Collaborating with :</h6>
+        <ul class="contact-info list-unstyled">
+          <li>Azmi Oumayma</li>
+          <br>
+          <h6>E-mails :</h6>
+          <li>E-mail@domain.com</li>
+        </ul>
+        <ul class="social-icons list-inline">
+          <li class="list-inline-item"> <h6>Visit GitHub Repository</h6> </li>
+          <li class="list-inline-item"><a href="https://github.com" target="_blank" title="Github"><i class="fa fa-github"></i></a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <p class="brand"> À propos du projet :</p>
+        <ul class="links list-unstyled">
+          <li>
+            ------------------------------------------------------------------
+          </li>
+          <li>
+            <ul class="list-unstyled">
+              <li>Projet : Gestion de MediaTek</li>
+              <li>Module : Base de données relationnels 2</li>
+              <li>Classe : IRISI1 - 2019/2020</li>
+              <li>
+                ------------------------------------------------------------------
+              </li>
+              <div style="text-align: center">
+                <li><span class="fa fa-code"></span> Faculté de Sciences et Techniques Gueliz</li>
+                <li><span class="fa fa-university"></span> University Cadi Ayyad</li>
+                <li><img class="irisi card-img" src="assets/imgs/irisi.png" alt="ingénierie en réseau informatique et systémes d'information"></li>
+              </div>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <h6 class="brand">Technologies Utilisées :</h6>
+        <ul class="list-group">
+          <li class="list-group-item">Back-End
+            <ul>
+              <li>Spring boot, RESTful api</li>
+            </ul>
+          </li>
+          <li class="list-group-item">Front-End
+            <ul>
+              <li>Angular</li>
+              <li>Bootstrap</li>
+            </ul>
+          <li class="list-group-item">
+            <img class="img-fluid" style="margin-left: 32px;width: 110px" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="">
+            <img class="img-fluid" style="width: 155px" src="https://angular.io/assets/images/logos/angular/angular.svg" alt="">
+            <img class="img-fluid" style="width: 300px; margin-left: 11px" src="https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg" alt="">
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align: center" class="footer-uca"><img class="uca" src="assets/imgs/uca.png" alt=""></div>
+    <div class="copyrights">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <p>&copy; 2020, MediaTek.                        </p>
+          </div>
+          <div class="col-md-5 text-right">
+            <p>Template By <a href="https://bootstrapious.com/" class="external">Bootstrapious.</a>  </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"> </script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/owl.carousel/owl.carousel.min.js"></script>
+<script src="assets/app.js"></script>
 </body>
 </html>

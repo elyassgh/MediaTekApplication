@@ -1,0 +1,98 @@
+<!-- Modal-->
+<script src="home.component.ts"></script>
+<div id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade">
+  <div role="document" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="exampleModalLabel" class="modal-title">Identifier-vous</h5>
+        <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+        <form id="signupform" action="#">
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input [(ngModel)]="client.nom" type="text" name="nom" placeholder="Votre Nom" id="nom">
+          </div>
+          <div class="form-group">
+            <label for="prenom">Prenom</label>
+            <input [(ngModel)]="client.prenom" type="text" name="prenom" placeholder="Votre Prenom" id="prenom">
+          </div>
+          <div class="form-group">
+            <label for="cin">Cin</label>
+            <input [(ngModel)]="client.cin" type="text" name="cin" placeholder="Votre Cin" id="cin">
+          </div>
+          <div class="form-group">
+            <label for="tele">Téléphone</label>
+            <input [(ngModel)]="client.tele" type="text" name="tele" placeholder="Votre N° de Télé." id="tele">
+          </div>
+          <div class="form-group">
+            <label for="adresse">Adresse</label>
+            <input [(ngModel)]="client.adresse" type="text" name="adresse" placeholder="Votre Address" id="adresse">
+          </div>
+          <div class="form-group">
+            <button (click)="save()" type="submit" class="submit btn btn-primary btn-shadow btn-gradient">S'inscrire</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<section id="hero" class="hero hero-home bg-gray">
+  <div class="container">
+    <div class="row d-flex">
+      <div class="col-lg-6 text order-2 order-lg-1">
+        <h1>MediaTek &mdash; Shop</h1>
+        <p class="hero-text">S'identifiez, ou s'inscrire si vous ne vous êtes pas encore inscrit !</p>
+        <div class="CTA"><a href="#SeConnecter" class="btn btn-primary btn-shadow btn-gradient link-scroll">s'identifier</a>
+          <button onClick="document.getElementById('identifier').click();" style="margin-top: -8px" class="btn btn-outline-primary">S'INSCRIRE MAINTENANT</button>
+        </div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2"><img class="img-fluid" width="450px" src="assets/imgs/home.svg" alt=""> </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="testimonials">
+  <div class="container">
+    <header class="text-center no-margin">
+      <h2>À la mode maintenant <span class="fa fa-exclamation"></span></h2>
+      <p class="lead">Découvrez les Produits Tendance.</p>
+    </header>
+    <div class="owl-carousel owl-theme testimonials-slider">
+
+      <div *ngFor="let p of result " class="item-holder">
+
+        <div class="item m-0">
+          <div class="card rounded shadow-sm border-0">
+            <div class="card-body p-0">
+              <div style="height: 250px; max-width: 250px" class="m-0 p-0 align-content-center">
+                <img width="100%" src="assets/imgs/{{p.qteStock}}.jpg" class="img img-fluid">
+              </div>
+              <h4 class="text-uppercase">{{p.categorie}}</h4>
+              <h5 style="font-family: 'Lexend Tera', sans-serif" class="text-left ">{{p.prixUnit}} Dhs</h5>
+              <p class="text-dark">{{p.designation}}</p>
+              <h6 class="text-danger">Reste seulement : <span style="font-family: 'Lexend Tera', sans-serif;">{{p.qteStock}}</span> unités !</h6>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="SeConnecter" class="newsletter bg-light">
+  <div class="container text-center">
+    <h2>S'Identifier</h2>
+    <p class="lead"><span class="fa fa-exclamation-circle"></span> identifiez-vous pour naviguer dans le magasin.</p>
+    <div class="form-holder">
+      <form id="newsletterForm" action="#">
+        <div class="form-group">
+          <input [(ngModel)]="clientService.cin" type="text" name="cin" id="connect" placeholder="Entrer votre cin ici.">
+          <button (click)="connect()" type="submit" class="btn btn-primary btn-gradient submit">S'identifier</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -11,11 +11,11 @@
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let p of cart" class="produit_row">
+          <tr *ngFor="let p of cart;let i = index;" class="produit_row">
             <td>
               <div class="media">
                 <div class="d-flex">
-                  <img class="img-fluid" width="350px" height="auto" src="assets/imgs/4.jpg" alt="">
+                  <img class="img-fluid" width="350px" height="auto" src="assets/imgs/{{p.id}}.jpg">
                 </div>
                 <div class="media-body">
                   <h4>{{p.categorie}} : </h4>
@@ -28,7 +28,7 @@
             </td>
             <td class="qty_container">
               <div class="product_count">
-                <input type="number" class="qteCom" id="sst" maxlength="12" min="0" class="input-text qty">
+                <input [(ngModel)]="produits[p.id]" type="number" class="qteCom" maxlength="12" min="1" name="produits[]" class="input-text qty form-control">
               </div>
             </td>
           </tr>
@@ -76,7 +76,7 @@
           <br>
           </tbody>
           <tfoot>
-          <button class="btn gray_btn" (click)="valider()">Valider la commande</button>
+          <button class="btn gray_btn" (click)="test()">Valider la commande</button>
           </tfoot>
         </table>
       </div>

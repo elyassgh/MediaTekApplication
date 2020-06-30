@@ -29,21 +29,16 @@ export class CartComponent implements OnInit {
     return this.clientService.sessionClient;
   }
 
-  private _produits : Array<Produit>;
-
-
-  get produits(): Array<Produit> {
-    if (this._produits == null) {
-      this._produits = new Array<Produit>();
-    }
-    return this._produits;
-  }
-
-  set produits(value: Array<Produit>) {
-    this._produits = value;
-  }
+  produits = Array<number>();
 
   adresse: string;
+
+  public test () {
+    //boucle sur les produits :
+    for(var p in this.produits) {
+        console.log(p);
+    }
+  }
 
   public valider() {
      // Création de la commande :
@@ -56,9 +51,8 @@ export class CartComponent implements OnInit {
       this.http.get(this.url + '/lastFacture').subscribe(data => {
 
         //boucle sur les produits :
-        // Probléme !  Comment submit chaque produit avec la sa qteCom. fetch product details to array produits.
-        for(var p in this._produits) {
-          this.http.post( this.url2 + '/ref' + data + ','+ this.sessionClient.id + '/qte/ + p.qte',null).subscribe();
+        for(var p in this.produits) {
+          this.http.post( this.url2 + '/ref' + data + ','+ this.sessionClient.id + '/qte/' + p ,null).subscribe();
         }
 
       } , error => {

@@ -16,7 +16,19 @@ export class ProduitService {
   private _produit: Produit;
   private _produits: Array<Produit>;
   private _result: Array<Produit>;
+  private _cart: Array<Produit>;
 
+
+  get cart(): Array<Produit> {
+    if (this._cart == null) {
+      this._cart = new Array<Produit>();
+    }
+      return this._cart;
+  }
+
+  set cart(value: Array<Produit>) {
+    this._cart = value;
+  }
 
   get produit(): Produit {
     if (this._produit == null) {
@@ -58,4 +70,9 @@ export class ProduitService {
     });
   }
 
+  public add(produit: Produit) {
+    this.cart.push(produit);
+    alert('item added');
+    console.log()
+  }
 }

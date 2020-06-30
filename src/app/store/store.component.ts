@@ -24,4 +24,8 @@ export class StoreComponent implements OnInit {
     return this.produitService.getAll();
   }
 
+  public add(produit: Produit) {
+    return this.produitService.add(produit);
+  }
+
 }

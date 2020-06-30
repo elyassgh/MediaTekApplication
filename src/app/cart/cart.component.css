@@ -125,7 +125,6 @@
 .cart_area {
   padding-top: 100px;
   padding-bottom: 100px; }
-
 .cart_inner .table thead tr th {
   border-top: 0px;
   font-size: 14px;
@@ -139,7 +138,7 @@
   vertical-align: middle;
   align-self: center; }
 .cart_inner .table tbody tr td .media .d-flex {
-  padding-right: 30px; }
+  padding-right: 50px; }
 .cart_inner .table tbody tr td .media .d-flex img {
   border: 1px solid #eeeeee;
   border-radius: 3px; }
@@ -163,22 +162,6 @@
   box-shadow: none; }
 .cart_inner .table tbody tr td .product_count .increase {
   top: -2px; }
-.cart_inner .table tbody tr td .product_count .increase:before {
-  content: "";
-  height: 40px;
-  width: 1px;
-  position: absolute;
-  left: -3px;
-  top: 0px;
-  background: #eeeeee; }
-.cart_inner .table tbody tr td .product_count .increase:after {
-  content: "";
-  height: 1px;
-  width: 30px;
-  position: absolute;
-  left: -3px;
-  top: 22px;
-  background: #eeeeee; }
 .cart_inner .table tbody tr td .product_count .reduced {
   bottom: -6px; }
 .cart_inner .table tbody tr.bottom_button .gray_btn {
@@ -193,50 +176,6 @@
   font-weight: 500; }
 .cart_inner .table tbody tr.bottom_button td:last-child {
   width: 60px; }
-.cart_inner .table tbody tr.bottom_button td .cupon_text {
-  margin-left: -446px; }
-.cart_inner .table tbody tr.bottom_button td .cupon_text input {
-  width: 200px;
-  padding: 0px 15px;
-  border-radius: 3px;
-  border: 1px solid #eeeeee;
-  height: 40px;
-  font-size: 14px;
-  color: #cccccc;
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
-  margin-right: -3px;
-  outline: none;
-  box-shadow: none; }
-.cart_inner .table tbody tr.bottom_button td .cupon_text input.placeholder {
-  font-size: 14px;
-  color: #cccccc;
-  font-family: "Roboto", sans-serif;
-  font-weight: normal; }
-.cart_inner .table tbody tr.bottom_button td .cupon_text input:-moz-placeholder {
-  font-size: 14px;
-  color: #cccccc;
-  font-family: "Roboto", sans-serif;
-  font-weight: normal; }
-.cart_inner .table tbody tr.bottom_button td .cupon_text input::-moz-placeholder {
-  font-size: 14px;
-  color: #cccccc;
-  font-family: "Roboto", sans-serif;
-  font-weight: normal; }
-.cart_inner .table tbody tr.bottom_button td .cupon_text input::-webkit-input-placeholder {
-  font-size: 14px;
-  color: #cccccc;
-  font-family: "Roboto", sans-serif;
-  font-weight: normal; }
-.cart_inner .table tbody tr.bottom_button td .cupon_text .primary-btn {
-  height: 40px;
-  line-height: 38px;
-  text-transform: uppercase;
-  padding: 0px 38px;
-  margin-right: -3px;
-  border-radius: 0; }
-.cart_inner .table tbody tr.bottom_button td .cupon_text .gray_btn {
-  padding: 0px 40px; }
 .cart_inner .table tbody tr.shipping_area td:nth-child(3) {
   vertical-align: top; }
 .cart_inner .table tbody tr.shipping_area .shipping_box {

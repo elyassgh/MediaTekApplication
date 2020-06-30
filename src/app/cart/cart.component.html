@@ -8,45 +8,33 @@
             <th scope="col">Produits</th>
             <th scope="col">Prix</th>
             <th scope="col">Quantité</th>
-            <th scope="col">Total</th>
           </tr>
           </thead>
           <tbody>
-          <tr class="produit_row">
+          <tr *ngFor="let p of cart" class="produit_row">
             <td>
               <div class="media">
                 <div class="d-flex">
                   <img class="img-fluid" width="350px" height="auto" src="assets/imgs/4.jpg" alt="">
                 </div>
                 <div class="media-body">
-                  <h4>Laptop : </h4>
-                  <p>  Description.</p>
+                  <h4>{{p.categorie}} : </h4>
+                  <p> {{p.categorie}}, {{p.designation}}.</p>
                 </div>
               </div>
             </td>
             <td class="price_container">
-              <h5 class="price">360.00 dhs</h5>
+              <h5 class="price">{{p.prixUnit}} dhs</h5>
             </td>
             <td class="qty_container">
               <div class="product_count">
-                <input type="text" class="qteCom" name="qty" id="sst" maxlength="12" min="1" title="Quantity:"
-                       class="input-text qty">
-                <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                        class="increase items-count" type="button"><i class="fa fa-angle-up"></i></button>
-                <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                        class="reduced items-count" type="button"><i class="fa fa-angle-down"></i></button>
+                <input type="number" class="qteCom" id="sst" maxlength="12" min="0" class="input-text qty">
               </div>
-            </td>
-            <td class="subtotal_container">
-              <h5 class="subtotal"></h5>
             </td>
           </tr>
           <!-------------------------------------------total--------------------------------------------->
           <tr>
             <td>
-            </td>
-            <td>
-
             </td>
             <td>
               <h5>Total TTC :</h5>
@@ -59,15 +47,12 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
           </tr>
-
           <!-------------------------------------------total--------------------------------------------->
-
           <tr class="shipping_area">
             <div class="client-details mt-5">
               <div class="card">
-                <div class="card-header"><h4>Facture pour le client :</h4></div>
+                <div class="card-header"><h4>Détails de la Facture :</h4></div>
                 <div class="card-body">
                   <div class="container">
                     <div class="row">
@@ -75,45 +60,23 @@
                         <h6>Nom :</h6>
                         <h6>Prénom :</h6>
                         <h6>Cin :</h6>
-                        <h6>Catégorie :</h6>
                       </div>
                       <div class="col col-6">
-                        <h6>Elghazi</h6>
-                        <h6>Ilyass</h6>
-                        <h6>P339854</h6>
-                        <h6>VIP</h6>
+                        <h6>{{sessionClient.nom}}</h6>
+                        <h6>{{sessionClient.prenom}}</h6>
+                        <h6>{{sessionClient.cin}}</h6>
                       </div>
                     </div>
                   </div>
+                  <input class="form-control" type="text" name="adresse" [(ngModel)]="adresse" placeholder="Adresse de facturation">
                 </div>
               </div>
             </div>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <div class="shipping_box">
-              <h6>Adresse de facturation :<i class="fa fa-caret-down"></i></h6>
-              <select class="shipping_select">
-                <option value="Casablanca Settat">Casablanca Settat</option>
-                <option value="Marrakesh Safi">Marrakesh Safi</option>
-                <option value="Drâa Tafillat">Drâa Tafillat</option>
-                <option value="Souss massa">Souss massa</option>
-              </select>
-              <input type="text" placeholder="Ville">
-              <input type="text" placeholder="Adresse">
-              <input type="text" placeholder="Postcode/Zipcode">
-            </div>
           </tr>
+          <br>
           </tbody>
           <tfoot>
-          <a class="gray_btn" href="#">Valider la commande</a>
+          <button class="btn gray_btn" (click)="valider()">Valider la commande</button>
           </tfoot>
         </table>
       </div>

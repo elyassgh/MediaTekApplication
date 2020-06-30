@@ -14,6 +14,18 @@ export class ClientService {
 
   private _client: Client;
   private _cin: string;
+  private _sessionClient: Client;
+
+  get sessionClient() {
+    if (!this._sessionClient) {
+      this._sessionClient = new Client();
+    }
+    return this._sessionClient;
+  }
+
+  set sessionClient(value: Client) {
+    this._sessionClient = value;
+  }
 
   get cin(): string {
     return this._cin;
@@ -46,6 +58,7 @@ export class ClientService {
   public connect() {
       this.http.get<Client>(this.url + '/cin/' + this.cin ).subscribe(data => {
         if (data != null && data.cin === this.cin) {
+          this._sessionClient=data;
           this.router.navigate(['/store']);
         } else {
           window.alert('Le cin entré ne correspond au aucune client !!');

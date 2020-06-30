@@ -50,15 +50,17 @@ export class CartComponent implements OnInit {
      });
 
      // Insertion des lignes de commandes :
-      this.http.get(this.url + '/lastFacture').subscribe(data => {
+      this.http.get(this.url + '/lastFacture' , { responseType: 'text' }).subscribe(data => {
 
-        this.test()
+        console.log(data);
+
+        this.test();
 
         //boucle sur les produits :
         for(var p in this.produits) {
-          this.http.post( this.url2 + '/ref' + data + ','+ p + '/qte/' + this.produits[p] ,null).subscribe();
+          this.http.post( this.url2 + '/ref/' + data + ',' + p + '/qte/' + this.produits[p] ,null).subscribe();
         }
-        
+
       } , error => {
         console.log('error');
       });

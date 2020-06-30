@@ -28,7 +28,7 @@
             </td>
             <td class="qty_container">
               <div class="product_count">
-                <input [(ngModel)]="produits[p.id]" type="number" class="qteCom" maxlength="12" min="1" name="produits[]" class="input-text qty form-control">
+                <input [(ngModel)]="produits[p.id]" type="number" class="qteCom" maxlength="12" min="1" max="{{p.qteStock}}" name="produits[]" class="input-text qty form-control">
               </div>
             </td>
           </tr>
@@ -76,7 +76,7 @@
           <br>
           </tbody>
           <tfoot>
-          <button class="btn gray_btn" (click)="test()">Valider la commande</button>
+          <button class="btn gray_btn" (click)="valider()">Valider la commande</button>
           </tfoot>
         </table>
       </div>
